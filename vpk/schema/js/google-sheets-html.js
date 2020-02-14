@@ -16,7 +16,7 @@ var visualization;
 
 function drawVisualization() {
     var query = new google.visualization.Query('https://spreadsheets.google.com/tq?key=1iBFGSB2hMy5D7G8HEjkxkgFFvF88-5qNL9r5bPh9xDs&output=html&usp=sharing');
-    query.setQuery('SELECT A, B, C, D, E, G  label A "Plats", B "Spelare", C "01", D "02", E "03", G "05"');
+    query.setQuery('SELECT A, B, C, D, E, G');
     query.send(handleQueryResponse);
 }
 
