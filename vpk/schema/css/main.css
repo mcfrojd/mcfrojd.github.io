@@ -30,7 +30,7 @@ h1 {
 p {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
-  font-size: 1em;
+  font-size: 1.5em;
   line-height: 1.65em;
   margin: 0.6em auto 0.6em auto;
   padding: 0;
@@ -83,7 +83,7 @@ a:hover {
 
 .google-visualization-table-td,
 .google-visualization-table-th {
-  border: 0px solid #333 !important;
+  border: 1px solid #333 !important;
   color: #fff !important;
 }
 
