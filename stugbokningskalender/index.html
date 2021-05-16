@@ -4,6 +4,57 @@
 <meta charset='utf-8' />
 <link href='lib/main.css' rel='stylesheet' />
 <script src='lib/main.js'></script>
+
+
+<script>
+
+	$(document).ready(function() {
+
+		$('#calendar').fullCalendar({
+			height: 930,
+			googleCalendarApiKey: 'AIzaSyA0WMDWURXmM3cd0kKZXO1ytBp6F16EQeA',
+			
+			weekNumbers: true,
+		//	theme: true,
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month,agendaWeek,agendaDay'
+			},
+			editable: true,
+			eventLimit: true, // allow "more" link when too many events
+			
+			eventSources: [
+            {
+				// Helgdagar
+                googleCalendarId: 'sv.swedish#holiday@group.v.calendar.google.com',
+                color: '#ac725e'
+            },
+            {
+				// Mathias
+                googleCalendarId: 'c_sfqiomb67q46o6q97r48aael1o@group.calendar.google.com',
+                color: '#4986e7'
+            },
+            {
+				// Per
+                googleCalendarId: 'c_sfqiomb67q46o6q97r48aael1o@group.calendar.google.com',
+                color: '#ffad46'
+            },
+            {
+				// Kjell
+                googleCalendarId: 'c_sfqiomb67q46o6q97r48aael1o@group.calendar.google.com',
+                color: '#f83a22'
+            }
+        ]
+			
+		});
+		
+	});
+
+</script>
+
+
+<!-- 
 <script>
 
   document.addEventListener('DOMContentLoaded', function() {
@@ -25,14 +76,42 @@
       googleCalendarApiKey: 'AIzaSyA0WMDWURXmM3cd0kKZXO1ytBp6F16EQeA',
 
       // Stuga 1
-      events: 'c_sfqiomb67q46o6q97r48aael1o@group.calendar.google.com',
+      // events: 'c_sfqiomb67q46o6q97r48aael1o@group.calendar.google.com',
 
-      eventClick: function(arg) {
-        // opens events in a popup window
-        window.open(arg.event.url, 'google-calendar-event', 'width=700,height=600');
+			eventSources: [
+            {
+				// Helgdagar
+                googleCalendarId: 'sv.swedish#holiday@group.v.calendar.google.com',
+                color: '#ac725e'
+            },
+            {
+				// Stuga 1
+                googleCalendarId: 'c_sfqiomb67q46o6q97r48aael1o@group.calendar.google.com',
+                color: '#4986e7'
+            },
+            {
+				// Stuga 2
+                googleCalendarId: 'c_sfqiomb67q46o6q97r48aael1o@group.calendar.google.com',
+                color: '#ffad46'
+            },
+            {
+				// Stuga 3
+                googleCalendarId: 'c_sfqiomb67q46o6q97r48aael1o@group.calendar.google.com',
+                color: '#f83a22'
+            }
+        ]
+			
 
-        arg.jsEvent.preventDefault() // don't navigate in main tab
-      },
+
+
+
+
+      // eventClick: function(arg) {
+      //   // opens events in a popup window
+      //   window.open(arg.event.url, 'google-calendar-event', 'width=700,height=600');
+
+      //   arg.jsEvent.preventDefault() // don't navigate in main tab
+      // },
 
       loading: function(bool) {
         document.getElementById('loading').style.display =
@@ -44,7 +123,7 @@
     calendar.render();
   });
 
-</script>
+</script> -->
 <style>
 
   body {
