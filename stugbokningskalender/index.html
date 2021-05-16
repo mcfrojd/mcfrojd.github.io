@@ -6,7 +6,31 @@
 <script src='lib/main.js'></script>
 
 
-<script>
+<script type='text/javascript'>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      googleCalendarApiKey: 'AIzaSyA0WMDWURXmM3cd0kKZXO1ytBp6F16EQeA',
+      eventSources: [
+        {
+          googleCalendarId: 'sv.swedish#holiday@group.v.calendar.google.com'
+          className: 'nice-event'
+        },
+        {
+          googleCalendarId: 'c_sfqiomb67q46o6q97r48aael1o@group.calendar.google.com',
+          className: 'gcal-event'
+        }
+      ]
+    });
+
+    calendar.render();
+  });
+
+</script>
+
+<!-- <script>
 
   document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
@@ -56,7 +80,7 @@
     calendar.render();
   });
 
-</script>
+</script> -->
 
 
 <!-- 
