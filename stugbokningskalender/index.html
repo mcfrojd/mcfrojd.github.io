@@ -35,11 +35,12 @@
         }
       ],
 
-      eventClick: function(arg) {
-        // opens events in a popup window
-        window.open(arg.event.url, 'google-calendar-event', 'width=700,height=600');
+      eventClick: function(info) {
+        info.jsEvent.preventDefault(); // don't let the browser navigate
 
-        arg.jsEvent.preventDefault() // don't navigate in main tab
+        if (info.event.url) {
+          window.open(info.event.url);
+        }
       }
 
     });
