@@ -8,21 +8,21 @@
 
 <script>
 
-	$(document).ready(function() {
+document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
 
-		$('#calendar').fullCalendar({
+    var calendar = new FullCalendar.Calendar(calendarEl, {
 			height: 930,
 			googleCalendarApiKey: 'AIzaSyA0WMDWURXmM3cd0kKZXO1ytBp6F16EQeA',
 			
 			weekNumbers: true,
 		//	theme: true,
-			header: {
-				left: 'prev,next today',
-				center: 'title',
-				right: 'month,agendaWeek,agendaDay'
+    headerToolbar: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth,listYear'
 			},
-			editable: true,
-			eventLimit: true, // allow "more" link when too many events
+			displayEventTime: false, // don't show the time column in list view
 			
 			eventSources: [
             {
