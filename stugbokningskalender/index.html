@@ -4,6 +4,7 @@
 <meta charset='utf-8' />
 <link href='lib/main.css' rel='stylesheet' />
 <script src='lib/main.js'></script>
+<script src='lib/locales/sv.js'></script>
 
 
 <script type='text/javascript'>
@@ -12,6 +13,7 @@
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
+      locale: 'sv',
       googleCalendarApiKey: 'AIzaSyA0WMDWURXmM3cd0kKZXO1ytBp6F16EQeA',
       firstDay: 1,
       eventSources: [
