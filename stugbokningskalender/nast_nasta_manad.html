@@ -14,17 +14,12 @@
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
-      headerToolbar: {
-        left: 'title',
-        center: '',
-        right: 'prev,next'
-      },
       locale: 'sv',
-      contentHeight: 'auto',
-      initialView: 'listWeek',
+//      contentHeight: 600,
 //      aspectRatio: 1.2,
-//      weekNumbers: true,
-//      weekNumberCalculation: 'ISO',
+      initialDate: moment().add(2, "months").toDate(),
+      weekNumbers: true,
+      weekNumberCalculation: 'ISO',
       googleCalendarApiKey: 'AIzaSyA0WMDWURXmM3cd0kKZXO1ytBp6F16EQeA',
       firstDay: 1,
       eventSources: [
@@ -102,11 +97,6 @@
 
   #calendar {
     margin: 0 auto;
-  }
-
-  .fc .fc-toolbar-title {
-    font-size: 1.0em;
-    margin: 0;
   }
 
 </style>
